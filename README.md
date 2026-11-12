@@ -8,8 +8,8 @@ small runtime that replaces the Wii hardware, IOS and the DSP.
 
 ## Status
 
-In progress: boots through the strap screens, logos, title, save creation and MODE SELECT into Arcade mode's
-entry screen. Not released yet.
+In progress: boots through the strap screens, logos, title, save creation, MODE SELECT, Arcade entry and name
+entry, the How To Shoot tutorial, MISSION SELECT and into Mission 2 (Air Force One). Not released yet.
 
 ## Download
 

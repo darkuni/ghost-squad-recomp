@@ -15,8 +15,9 @@ libsdl2 / sdl2 from your package manager); a GPU with OpenGL 3.3.
 
 Controls (Wii Remote / Wii Zapper)
   The mouse is the gun: the crosshair follows it one to one. Shoot and pick menu items with B
-  (left mouse button). + starts ("PRESS THE + BUTTON" on the title screen). A is the arcade
-  cabinet's Action button. Reload by aiming off the picture and shooting: move the mouse off the
+  (left mouse button). + starts ("PRESS THE + BUTTON" on the title screen) and is the Shot
+  Selector in game (3-shot burst / semi-auto / full auto). A is the Action button (used at
+  events, and to skip scenes). Reload by aiming off the picture and shooting: move the mouse off the
   picture, or hold the middle mouse button / V (LB / LT on a gamepad) to aim off it.
 
                  Mouse + keyboard        Gamepad                 Wii
@@ -26,7 +27,8 @@ Controls (Wii Remote / Wii Zapper)
   aim off screen middle button, V        LB / LT                 reload
   d-pad          arrow keys              d-pad                   d-pad
   1 / 2          1 / 2                   X / Y                   1 / 2
-  + / - / HOME   Enter / Backspace / H   Start / Back / Guide    + / - / HOME
+  + (selector)   Enter                   Start                   + (start, shot selector)
+  - / HOME       Backspace / H           Back / Guide            - / HOME
 
   "Mouse buttons" in the settings menu (or controls = mouse / mouse_swap in
   ghostsquad.ini) swaps the left and right mouse buttons. "Capture mouse"

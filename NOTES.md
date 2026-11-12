@@ -45,7 +45,8 @@ SDK match.
 
 ## Status
 - Boots through the strap and Zapper screens, ESRB / SEGA / AM2 / Polygon Magic, the title (PRESS THE + BUTTON),
-  save creation (NAND save.dat, banner.bin), MODE SELECT, Arcade -> player entry ("Accepting entry").
+  save creation (NAND save.dat, banner.bin), MODE SELECT, Arcade -> player entry, name entry, player data, the
+  How To Shoot tutorial (+ = Shot Selector, A = Action button), MISSION SELECT, Mission 2 briefing and intro.
 - The title movie (gs_wii_title_8mbps_29.97fps.sfd) is read but shows as a grey picture in the headless test runs.
 
 ## Testing
