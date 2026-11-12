@@ -1,0 +1,1 @@
+802ABE50 WPADGetStatus     # 1-word b to WUDGetStatus (matches HOTD / Martian Panic)
