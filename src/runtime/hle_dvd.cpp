@@ -92,6 +92,9 @@ static bool dvd_read(uint32_t dst, uint32_t len, uint64_t off) {
     fseek(f, (long)(off - it->off), SEEK_SET);
     std::vector<uint8_t> buf(len, 0);
     size_t got = fread(buf.data(), 1, len, f);
+    // Past the end of a file a real disc holds the mastering tool's junk fill, never zeros (Gunblade's
+    // loader depends on it; zeros there made its load never finish).
+    if (got < len) memset(buf.data() + got, 0xFF, len - got);
     memcpy(MEM + (dst & 0x9FFFFFFFu), buf.data(), len);
     static int logged = 0;
     static const int lim = getenv("DVDLOG") ? 1 << 30 : 200;

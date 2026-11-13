@@ -171,6 +171,10 @@ static long parse_cmd(const uint8_t* p, size_t n, bool in_dl) {
 struct Burst { uint32_t addr, next; std::array<uint8_t, 32> b; };
 static std::deque<Burst> g_bursts;
 static uint8_t g_part[32]; static int g_partn = 0;
+// GXResetWriteGatherPipe (mtwpar) drops bytes left in the pipe. GXBeginDisplayList relies on it: without
+// the reset, the tail of the previous GXFlush lands at the start of a display list, which can overrun an
+// exactly-sized buffer and make GXEndDisplayList report overflow (size 0, so the draw is skipped).
+void gx_wgp_reset() { g_partn = 0; }
 static uint32_t g_rptr = 0;          // physical address of the next burst the GP reads
 static bool g_bp_latched = false;    // interrupt raised for the current stall
 static uint32_t pi_reg(uint32_t a) { return mmio_peek(a); }
